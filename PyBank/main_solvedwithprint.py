@@ -1,7 +1,6 @@
 # Create Imports 
 import os 
 import csv 
-import sys 
 import numpy as np
 import pandas as pd 
 
@@ -37,11 +36,13 @@ maxProf = change.max()
 maxLoss_date = budget_df.loc[budget_df['Profit_Losses'].idxmin(), 'Date']
 maxLoss = change.min()
 
-sys.stdout = open("main_solvedwithprint, 'w')
 print('Financial Analysis')
 print('Total Months: ' , total_months)
 print('Total: $',net_pl)
 print ('Average Change: $',round(pl_change,2))
 print('Greatest Increase in Profits:', maxProf_date, "$",maxProf)
 print('Greatest Decrease in Profits:', maxLoss_date, "$", maxLoss)
-sys.stdout.close()
+
+f = open('PyBank_Solvedwithprint.py', 'a')
+f.write('PyBank_Solvedwithprint.txt')
+f.close()
